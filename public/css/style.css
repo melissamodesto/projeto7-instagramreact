@@ -310,6 +310,36 @@ body {
   display: none !important;
 }
 
+.post .fundo .acoes ion-icon[name="heart"] {
+  fill: rgb(187, 42, 42);
+  animation: heart-animation 1s ease-in-out infinite;
+}
+
+.post .fundo .acoes ion-icon[name="bookmark"] {
+  fill: black;
+  animation: heart-animation 1s ease-in-out infinite;
+}
+
+.conteudo img {
+  position: relative;
+}
+
+.coracao {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.coracao:active {
+  opacity: 0.5;
+}
+
 @media (max-width: 935px) {
   .sidebar {
     display: none;
