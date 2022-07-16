@@ -21,7 +21,10 @@ const postList = [
 
 function PostContainer(props) {
 
-    const [likeProfile, setLikeProfile] = React.useState(props.likeProfile);
+    const str = String('você')
+    const str2 = props.likeProfile
+
+    const [likePro, setLikePro] = React.useState(String(props.likeProfile));
     const [likeNum, setLikeNum] = React.useState(Number(props.likeNumbers));
     const [like, setLike] = React.useState('heart-outline');
     const [save, setSave] = React.useState('bookmark-outline');
@@ -30,10 +33,11 @@ function PostContainer(props) {
         if (like === 'heart-outline') {
             setLike('heart');
             setLikeNum(likeNum + 1);
-            
+            setLikePro(str);
         } else {
             setLike('heart-outline');
             setLikeNum(likeNum - 1);
+            setLikePro(str2);
         }
     }
 
@@ -89,7 +93,7 @@ function PostContainer(props) {
                     <img src={props.likeImage} />
 
                     <div class="texto">
-                        Curtido por <strong>{props.likeProfile}</strong> e <strong>outras {likeNum} pessoas</strong>
+                        Curtido por <strong>{likePro}</strong> e <strong>outras {likeNum} pessoas</strong>
                     </div>
                 </div>
             </div>
