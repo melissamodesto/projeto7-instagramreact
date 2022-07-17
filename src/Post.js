@@ -28,16 +28,19 @@ function PostContainer(props) {
     const [likeNum, setLikeNum] = React.useState(Number(props.likeNumbers));
     const [like, setLike] = React.useState('heart-outline');
     const [save, setSave] = React.useState('bookmark-outline');
+    const [heartPopUp, setHeartPopUp] = React.useState('pop-up');
 
     function likeHeart() {
         if (like === 'heart-outline') {
             setLike('heart');
             setLikeNum(likeNum + 1);
             setLikePro(str);
+            setHeartPopUp('pop-up-animation' + ' ' + 'pop-up');
         } else {
             setLike('heart-outline');
             setLikeNum(likeNum - 1);
             setLikePro(str2);
+            setHeartPopUp('pop-up');
         }
     }
 
@@ -64,17 +67,19 @@ function PostContainer(props) {
             </div>
 
             <div class="conteudo">
-                <img onDoubleClick={() => {
+                <img class="image-post" onDoubleClick={() => {
                     if (like === 'heart-outline') {
                         setLike('heart')
                         setLikeNum(likeNum + 1);
-            
-                    } else {
-                        setLike('heart-outline')
-                        setLikeNum(likeNum - 1);
+                        setLikePro(str);
+                        setHeartPopUp('pop-up-animation' + ' ' + 'pop-up');
                     }
-
+                    else {
+                        setLike('heart')
+                        setHeartPopUp('pop-up-animation' + ' ' + 'pop-up');
+                    }
                 }} src={props.postImage} />
+                <ion-icon class={heartPopUp} name="heart"></ion-icon>
             </div>
 
             <div class="fundo">
