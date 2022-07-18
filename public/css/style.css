@@ -351,10 +351,10 @@ body {
 .pop-up-animation {
   animation: heart-pop-up 0.75s linear;
   position: absolute;
-  top: calc(50% - 10px);
-  left: calc(50% - 10px);
-  width: 20px;
-  height: 20px;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
   z-index: 100;
   color: rgb(255, 255, 255);
 }
@@ -363,7 +363,6 @@ body {
   0% {
     transform: scale(1.0);
     opacity: 0;
-    width: 0px;
   }
   20% {
     transform: scale(1.6);
