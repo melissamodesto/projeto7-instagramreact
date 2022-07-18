@@ -342,10 +342,13 @@ body {
   animation: heart-animation 0.25s ease-in-out;
 }
 
+.mobile-background ion-icon{
+  animation: heart-animation 0.25s ease-in-out;
+}
+
 .conteudo {
   position: relative;
 }
-
 
 .pop-up {
   position: absolute;
