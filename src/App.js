@@ -8,6 +8,7 @@ function App() {
         <div>
             <Header />
             <Container />
+            <MobileBackground />
         </div>
     )
 }
