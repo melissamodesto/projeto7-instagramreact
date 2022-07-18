@@ -339,10 +339,10 @@ body {
 
 .pop-up {
   position: absolute;
-  top: calc(50% - 100px);
-  left: calc(50% - 100px);
-  width: 200px;
-  height: 200px;
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
   z-index: 100;
   color: rgb(255, 255, 255);
   opacity: 0;
