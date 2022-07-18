@@ -342,10 +342,6 @@ body {
   animation: heart-animation 0.25s ease-in-out;
 }
 
-.mobile-background ion-icon{
-  animation: heart-animation 0.25s ease-in-out;
-}
-
 .conteudo {
   position: relative;
 }
@@ -420,6 +416,9 @@ body {
     left: 0;
   }
 
+  .mobile-background ion-icon {
+    animation: heart-animation 0.25s ease-in-out;
+  }
 
   .sidebar {
     display: none;
